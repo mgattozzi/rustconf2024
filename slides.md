@@ -15,6 +15,8 @@ transition: slide-left
 # What happens when you run `cargo build`?
 Michael Gattozzi
 
+Slides: http://mgattozzi.github.io/rustconf2024/
+
 ---
 layout: image-right
 image: /images/portrait.jpg
@@ -68,16 +70,16 @@ layout: full
 transition: slide-up
 zoom: 2.1
 ---
-<div class="absolute left-10% bottom-0%">
+<div class="absolute left-10% bottom-5%">
 
 ```mermaid
 flowchart TD
   id0[User types `cargo build`]
   id1[User hits enter]
-  id2[rustup finds the right cargo]
-  id3[rustup invokes cargo]
-  id4[cargo resolves dependencies]
-  id5[cargo downloads any needed dependencies]
+  id2[cargo resolves dependencies]
+  id3[cargo downloads any needed dependencies]
+  id4[cargo gets a lock on the directory]
+  id5[cargo makes a build plan to build everything]
   id6[cargo invokes the correct rustc to compile dependencies]
   id7[cargo invokes the correct rustc to compile your code with dependencies]
   id8[A binary appears]
@@ -90,7 +92,7 @@ flowchart TD
   id5 ==> id6
   id6 ==> id7
   id7 ==> id8
-  id2 & id4 & id5 & id6 & id7 --> id9
+  id2 & id3 & id4 & id5 & id6 & id7 --> id9
 ```
 </div>
 
@@ -541,11 +543,15 @@ transition: slide-left
 
 Contact Information
 
-Twitter: @mgattozzi
+Bluesky: [@mgattozzi.dev](https://bsky.app/profile/mgattozzi.dev)
 
-Mastodon: @mgattozzi@hachyderm.io
+Twitter: [@mgattozzi](https://twitter.com/mgattozzi)
 
-Email: michael@ductile.systems
+Mastodon: [@mgattozzi@hachyderm.io](https://hachyderm.io/@mgattozzi)
+
+Email: [michael@ductile.systems](mailto:michael@ductile.systems)
+
+Slides: http://mgattozzi.github.io/rustconf2024/
 
 ---
 transition: slide-up
